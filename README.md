@@ -43,7 +43,7 @@ Choosing the number of topics the LDA model tries to find is an important parame
   
 ## LDAvis
 
-LDAvis is an interactive visualization tool with an interactive graphical representation of LDA models, described here:  (https://www.aclweb.org/anthology/W14-3110.pdf). After choosing a coherence value of 14 for papers in 1980s, 1990s and 2000s, and a coherence value of 20 for 2010s, the model results were visualized using LDAvis. The output was placed in the interactive HTML files, available here at a later date.
+LDAvis is an interactive visualization tool with an interactive graphical representation of LDA models, described here:  (https://www.aclweb.org/anthology/W14-3110.pdf). After choosing a coherence value of 14 for papers in 1980s, 1990s and 2000s, and a coherence value of 20 for 2010s, the model results were visualized using LDAvis. The output was placed in the interactive HTML files. These models are visual and interactive, so it is difficult to present the findings herein.
 
 The LDA models can also be viewed by the frequency of terms within the topics. Four frequency wordclouds are shown per decade in the following images:
 
