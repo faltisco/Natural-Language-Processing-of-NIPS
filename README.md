@@ -1,2 +1,42 @@
-# Natural_Language_Processing_NeurIPS_Papers
-The purpose this project is to do a topic based analysis of the content in papers submitted at an annual machine learning and computational neuroscience conference, NeurIPS.  (For more info on the conference, see : https://en.wikipedia.org/wiki/Conference_on_Neural_Information_Processing_Systems). The papers were presented at the NeurIPS between 1987 and 2017. Kaggle provides several CSV files of the papers in that corpus, there are more than 7,200 rows/samples of data, each represtng an individual paper. The papers were explored via NLP techniques (using sklearn) and Latent Dirichlet Allocation (LDA) used to detect the topics within. After the analysis, findings, especially the trends of topics and how they changed over time are better understood and presented.
+## Natural_Language_Processing_NeurIPS_Papers
+The purpose this project is to do a topic based analysis of the content in papers submitted at an annual conference for  computational neuroscience (ie. neural networks,AI and related topics) known as  NeurIPS.  (see: https://en.wikipedia.org/wiki/Conference_on_Neural_Information_Processing_Systems). 
+
+Over 7200 papers were obtained from Kaggle as CSV files. The papers were presented at NeurIPS between 1987 and 2017. The papers were explored via NLP techniques and Latent Dirichlet Allocation (LDA) models. LDA modeling is a form of probablistic, unsupervised deep learning that reveals topics. The findings are presented in graphical and topic descriptions which show the importance certain terms have within these LDA topics. It's important to note that these topics are often not easily understood by humans (NLP research hopes to improve this issue). Rather, the findings allow for a better view into the data of interest: human language and it's meaning and how machines are beginning to tackle the notion of meaning in natural language.
+
+## NeurIPS Data and EDA
+
+The papers were read into a Pandas dataframe and early EDA completed. The data was quite clean, and no imputation necessary. Here is a plot showing the number of papers per yearly conference. 
+https://github.com/faltisco/Natural_Language_Processing_NeurIPS_Papers/blob/master/images/papers_year_bar.png
+
+In NLP, word clouds seem quite useful because analysts can  graphically see what words are most frequent. The topics for papers presented seem well represented in the titles of the papers. As part of EDA, a word cloud of the frequence of terms in the titles is here:
+https://github.com/faltisco/Natural_Language_Processing_NeurIPS_Papers/blob/master/images/word_cloud_titles.png
+
+A new column was created from the papers' text called "text_processed" which stores the data after stop words were removed.  The following bar graph showing the most frequent terms in the overall corpus of papers taken together.
+https://github.com/faltisco/Natural_Language_Processing_NeurIPS_Papers/blob/master/images/Most_Com_W_in_Text.png
+
+## Analyzing Time Periods
+
+NLP modeling results require significant post-modeling analysis. Presentation of findings can be cumbersome because the findings are non-labeled topics found in quantitative ways. So, rather than analyzing each year's conference separately, a decision was made to analyze and present topics per decade of papers. The findings from each of the 1980s, the 1990s, the 2000s and the 2010's are presented using LDA modeling. The LDA topics can be viewed by coefficients that represent how important that term is in the formation of that un-labeled topic. For example, the following output from LDA:
+
+[(0,
+  '0.105*"kernel" + 0.086*"estimator" + 0.067*"estimate" + 0.064*"estimation" '
+  '+ 0.049*"regression" + 0.038*"density" + 0.029*"gaussian" + '
+  '0.029*"function" + 0.027*"covariance" + 0.018*"sample"'),
+ (1,
+  '0.194*"sequence" + 0.144*"prediction" + 0.110*"game" + 0.072*"predict" + '
+  '0.051*"expert" + 0.051*"strategy" + 0.035*"future" + 0.034*"action" + '
+  '0.027*"play" + 0.025*"frame"')]
+  
+  can be understood as showing topics 0 and 1. Within topic 0, the term "kernel" has a coefficient 0.105 and the next term "estimator" has a coefficient 0.086. These are the two most important terms in topic 0. Note that the values are best read as relative strengths. 
+  
+# Measuring The Coherence Values in LDA Models
+
+The common understanding of the modeling term "coherent" applies. It means the terms within the LDA topic support that topic.  So, the coherency measure in LDA modeling shows how well terms within topics support their shared topic. For a good discussion of coherency, see the following article written by Shashank Kapadia
+Shashank Kapadia:
+https://towardsdatascience.com/evaluate-topic-model-in-python-latent-dirichlet-allocation-lda-7d57484bb5d0
+
+The models in this analysis used herein utilized the "C_v" measure. Mathematically, it is a measure that uses "normalized pointwise mutual information (NPMI)" and the cosine similarity. It compares the distances between topics. This information was plotted to decide the hyperparameter of "tuning" the 4 LDA models (recall each represents a decade of papers). Here is one plot revealing the coherence scores for models of differing number of topics:
+https://github.com/faltisco/Natural_Language_Processing_NeurIPS_Papers/blob/master/images/opt_coh_top_90s.png
+
+Choosing the number of topics the LDA model tries to find is an important parameter to decide upon in LDA modeling. As the plot shows, the coherence value begins to stop increasing around 8 topics, and then certainly levels off at 14. For the 1990s papers, 14 was chosen as the number of topics for the LDA model to find. If computational resources become an issue, it seems also feasible to choose 8. 
+  
