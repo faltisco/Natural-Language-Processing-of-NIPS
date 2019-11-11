@@ -1,7 +1,7 @@
 ## Natural_Language_Processing_NeurIPS_Papers
 The purpose this project is to do a topic based analysis of the content in papers submitted at an annual conference for  computational neuroscience (ie. neural networks,AI and related topics) known as  NeurIPS.  (see: https://en.wikipedia.org/wiki/Conference_on_Neural_Information_Processing_Systems). 
 
-Over 7200 papers were obtained from Kaggle as CSV files. The papers were presented at NeurIPS between 1987 and 2017. The papers were explored via NLP techniques and Latent Dirichlet Allocation (LDA) models. LDA modeling is a form of probabalistic, unsupervised deep learning that reveals topics. The findings are presented in graphical and topic descriptions which show the importance certain terms have within these LDA topics. It's important to note that these topics are often not easily understood by humans (NLP research hopes to improve this issue). Rather, the findings allow for a better view into the data of interest: human language and it's meaning and how machines are beginning to tackle the notion of meaning in natural language.
+Over 7200 papers were obtained from Kaggle as CSV files. The papers were presented at NeurIPS between 1987 and 2017. The papers were explored via NLP techniques and Latent Dirichlet Allocation (LDA) models. LDA modeling is a form of probabilistic, unsupervised deep learning that reveals topics. The findings are presented in graphical and topic descriptions which show the importance certain terms have within these LDA topics. It's important to note that these topics are often not easily understood by humans (NLP research hopes to improve this issue). Rather, the findings allow for a better view into the data of interest: human language and it's meaning and how machines are beginning to tackle the notion of meaning in natural language.
 
 ## NeurIPS Data and EDA
 
@@ -58,8 +58,26 @@ https://github.com/faltisco/Natural_Language_Processing_NeurIPS_Papers/blob/mast
 ## Conclusions
 
 Topic coherence measures were calculated for each of the four period models. The "C_v" coherence score for each LDA model follows:
+
 1980s: 0.4589252522391932
+
 1990s: 0.4938471029084987
+
 2000s: 0.4964968134408346
+
 2010s: 0.4964169876394429
 
+The coherence scores are a good way of choosing how many topics the modeler should choose when building an LDA model. These scores are understood best in comparison to scores for models of fewer or greater numbers of topics chosen as the parameter for the LDA model. It is clear that for the decades of papers, 14 was the optimal number of topics. For the 2010s LDA model, 20 was the highest coherence score. 
+
+Lastly, LDA results are best analyzed via the term weight equations, and an attempt is made by the analyst to "qualify" rather her than quantify results. For example, in the 2000s, the following equation was resultant for topic 0:
+
+TOPIC 0: 
+0.043*"model" + 0.024*"response" + 0.022*"subject" + 0.022*"human" + 0.019*"functional" + 0.016*"brain" + 0.016*"trial" + 0.014*"stimulus" + 0.014*"movement" + 0.014*"experiment"
+
+Here, I would say that the topic has something to do with doing trials on modeling human stimuli functionally. Perhaps the topic was analyzing brain activity in order to duplicate it computationally. The word cloud for this topic shows as follows:
+
+https://github.com/faltisco/Natural_Language_Processing_NeurIPS_Papers/blob/master/images/Cloud_2000s.png
+
+The wordcloud below represents term frequency, not the term coefficients in the equation. So, it looks like "image," "visual," and "region" are frequent. Perhaps this furthers the notion that topic 0 is about imaging the human brain and building a model from that analysis. 
+
+Lastly, conclusions from the LDAvis are best understood interactively. Suffice it to say that this kind of interaction leads to better human understanding on the ways NLP processing is done via LDA modeling.
