@@ -22,6 +22,7 @@ NLP modeling results require significant post-modeling analysis. Presentation of
   '0.105*"kernel" + 0.086*"estimator" + 0.067*"estimate" + 0.064*"estimation" '
   '+ 0.049*"regression" + 0.038*"density" + 0.029*"gaussian" + '
   '0.029*"function" + 0.027*"covariance" + 0.018*"sample"'),
+  
  (1,
   '0.194*"sequence" + 0.144*"prediction" + 0.110*"game" + 0.072*"predict" + '
   '0.051*"expert" + 0.051*"strategy" + 0.035*"future" + 0.034*"action" + '
@@ -40,3 +41,8 @@ https://github.com/faltisco/Natural_Language_Processing_NeurIPS_Papers/blob/mast
 
 Choosing the number of topics the LDA model tries to find is an important parameter to decide upon in LDA modeling. As the plot shows, the coherence value begins to stop increasing around 8 topics, and then certainly levels off at 14. For the 1990s papers, 14 was chosen as the number of topics for the LDA model to find. If computational resources become an issue, it seems also feasible to choose 8. 
   
+## LDAvis
+
+LDAvis is an interacive visualization tool with an interacive graphical representation of LDA models, described here:  (https://www.aclweb.org/anthology/W14-3110.pdf). After choosing a coherence value of 14 for papers in 1980s, 1990s and 2000s, and a coherence value of 20 for 2010s, the model results were visualized using LDAvis. The ouput was placed in the following interactive HTML files, each representing a model from papers that decade:
+
+https://github.com/faltisco/Natural_Language_Processing_NeurIPS_Papers/blob/master/images/lda_1980s.html
