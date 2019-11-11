@@ -1,14 +1,14 @@
 ## Natural_Language_Processing_NeurIPS_Papers
 The purpose this project is to do a topic based analysis of the content in papers submitted at an annual conference for  computational neuroscience (ie. neural networks,AI and related topics) known as  NeurIPS.  (see: https://en.wikipedia.org/wiki/Conference_on_Neural_Information_Processing_Systems). 
 
-Over 7200 papers were obtained from Kaggle as CSV files. The papers were presented at NeurIPS between 1987 and 2017. The papers were explored via NLP techniques and Latent Dirichlet Allocation (LDA) models. LDA modeling is a form of probablistic, unsupervised deep learning that reveals topics. The findings are presented in graphical and topic descriptions which show the importance certain terms have within these LDA topics. It's important to note that these topics are often not easily understood by humans (NLP research hopes to improve this issue). Rather, the findings allow for a better view into the data of interest: human language and it's meaning and how machines are beginning to tackle the notion of meaning in natural language.
+Over 7200 papers were obtained from Kaggle as CSV files. The papers were presented at NeurIPS between 1987 and 2017. The papers were explored via NLP techniques and Latent Dirichlet Allocation (LDA) models. LDA modeling is a form of probabalistic, unsupervised deep learning that reveals topics. The findings are presented in graphical and topic descriptions which show the importance certain terms have within these LDA topics. It's important to note that these topics are often not easily understood by humans (NLP research hopes to improve this issue). Rather, the findings allow for a better view into the data of interest: human language and it's meaning and how machines are beginning to tackle the notion of meaning in natural language.
 
 ## NeurIPS Data and EDA
 
 The papers were read into a Pandas dataframe and early EDA completed. The data was quite clean, and no imputation necessary. Here is a plot showing the number of papers per yearly conference. 
 https://github.com/faltisco/Natural_Language_Processing_NeurIPS_Papers/blob/master/images/papers_year_bar.png
 
-In NLP, word clouds seem quite useful because analysts can  graphically see what words are most frequent. The topics for papers presented seem well represented in the titles of the papers. As part of EDA, a word cloud of the frequence of terms in the titles is here:
+In NLP, word clouds seem quite useful because analysts can  graphically see what words are most frequent. The topics for papers presented seem well represented in the titles of the papers. As part of EDA, a word cloud of the frequency of terms in the titles is here:
 https://github.com/faltisco/Natural_Language_Processing_NeurIPS_Papers/blob/master/images/word_cloud_titles.png
 
 A new column was created from the papers' text called "text_processed" which stores the data after stop words were removed.  The following bar graph showing the most frequent terms in the overall corpus of papers taken together.
@@ -43,6 +43,23 @@ Choosing the number of topics the LDA model tries to find is an important parame
   
 ## LDAvis
 
-LDAvis is an interacive visualization tool with an interacive graphical representation of LDA models, described here:  (https://www.aclweb.org/anthology/W14-3110.pdf). After choosing a coherence value of 14 for papers in 1980s, 1990s and 2000s, and a coherence value of 20 for 2010s, the model results were visualized using LDAvis. The ouput was placed in the following interactive HTML files, each representing a model from papers that decade:
+LDAvis is an interactive visualization tool with an interactive graphical representation of LDA models, described here:  (https://www.aclweb.org/anthology/W14-3110.pdf). After choosing a coherence value of 14 for papers in 1980s, 1990s and 2000s, and a coherence value of 20 for 2010s, the model results were visualized using LDAvis. The output was placed in the interactive HTML files, available here at a later date.
 
-https://github.com/faltisco/Natural_Language_Processing_NeurIPS_Papers/blob/master/images/lda_1980s.html
+The LDA models can also be viewed by the frequency of terms within the topics. Four frequency wordclouds are shown per decade in the following images:
+
+https://github.com/faltisco/Natural_Language_Processing_NeurIPS_Papers/blob/master/images/Cloud_1980s.png
+
+https://github.com/faltisco/Natural_Language_Processing_NeurIPS_Papers/blob/master/images/Cloud_1990s.png
+
+https://github.com/faltisco/Natural_Language_Processing_NeurIPS_Papers/blob/master/images/Cloud_2000s.png
+
+https://github.com/faltisco/Natural_Language_Processing_NeurIPS_Papers/blob/master/images/Cloud_2000s.png
+
+## Conclusions
+
+Topic coherence measures were calculated for each of the four period models. The "C_v" coherence score for each LDA model follows:
+1980s: 0.4589252522391932
+1990s: 0.4938471029084987
+2000s: 0.4964968134408346
+2010s: 0.4964169876394429
+
