@@ -21,6 +21,10 @@ A new column was created from the papers' text called "text_processed" which sto
 
 NLP modeling results require significant post-modeling analysis. Presentation of findings can be cumbersome because the findings are non-labeled topics found in quantitative ways. So, rather than analyzing each year's conference separately, a decision was made to analyze and present topics per decade of papers. The findings from each of the 1980s, the 1990s, the 2000s and the 2010's are presented using LDA modeling. The LDA topics can be viewed by coefficients that represent how important that term is in the formation of that un-labeled topic. For example, the following output from LDA:
 
+[<img src=".images/LDA_equations_10s.png"/>]()
+
+
+
 [(0,
   '0.105*"kernel" + 0.086*"estimator" + 0.067*"estimate" + 0.064*"estimation" '
   '+ 0.049*"regression" + 0.038*"density" + 0.029*"gaussian" + '
@@ -90,10 +94,14 @@ The wordcloud below represents term frequency, not the term coefficients in the 
 It’s important to note that much of the model analysis included using the visualization tool LDAvis (a partial screenshot is shown above).  LDAvis has interactivity and graphical display functions that enable quicker, easier analysis. The final analysis of each decade’s Topic 1 using  LDAvis revealed interesting results. As an added bonus result, a 2016-17 models’ results are included below. Here are the found topics, with human named titles:
 
 1980s - “Modeling the Brain”
+
 1990s - “Vision/Image Models”
+
 2000s - “Probability Analysis                
           Applied to Text Data”
+          
 2010s - “Computational Power
   		   and Linear Algebra”
+  		   
 2016-17s -“Neural Networks:
             Deep Learning (Images)” 
