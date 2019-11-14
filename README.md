@@ -7,13 +7,15 @@ Over 7200 papers were obtained from Kaggle as CSV files. (see [here](https://www
 
 The papers were read into a Pandas dataframe and early EDA completed. The data was quite clean, and no imputation necessary. Here is a plot showing the number of papers per yearly conference. 
 
-![<img src="./images/papers_year_bar.png"/>
-]()
+[<img src="./images/papers_year_bar.png"/>]()
+
 In NLP, word clouds seem quite useful because analysts can  graphically see what words are most frequent. The topics for papers presented seem well represented in the titles of the papers. As part of EDA, a word cloud of the frequency of terms in the titles is here:
-![<img src="./images/word_cloud_titles.png"/>]()
+
+[<img src="./images/word_cloud_titles.png"/>]()
 
 A new column was created from the papers' text called "text_processed" which stores the data after stop words were removed.  The following bar graph showing the most frequent terms in the overall corpus of papers taken together.
-![<img src="./images/Most_Com_W_in_Text.png"/>]()
+
+[<img src="./images/Most_Com_W_in_Text.png"/>]()
 
 ## Analyzing Time Periods
 
