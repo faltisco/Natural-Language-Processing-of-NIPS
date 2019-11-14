@@ -1,5 +1,5 @@
-## Natural_Language_Processing_NeurIPS_Papers
-The purpose this project is to do a topic based analysis of the content in papers submitted at an annual conference for  computational neuroscience (ie. neural networks,AI and related topics) known as  NeurIPS.  (see: https://en.wikipedia.org/wiki/Conference_on_Neural_Information_Processing_Systems). 
+## Natural Language Processing NeurIPS Papers
+The purpose this project is to do a topic based analysis of the content in papers submitted at an annual conference for  computational neuroscience (ie. neural networks,AI and related topics) known as  NeurIPS.  (see [https://en.wikipedia.org/wiki/Conference_on_Neural_Information_Processing_Systems]()). 
 
 Over 7200 papers were obtained from Kaggle as CSV files. (see [here](https://www.kaggle.com/benhamner/nips-papers#papers.csv).  The papers were presented at NeurIPS between 1987 and 2017. The papers were explored via NLP techniques and Latent Dirichlet Allocation (LDA) models. LDA modeling is a form of probabilistic, unsupervised deep learning that reveals topics. The findings are presented in graphical and topic descriptions which show the importance certain terms have within these LDA topics. It's important to note that these topics are often not easily understood by humans (NLP research hopes to improve this issue). Rather, the findings allow for a better view into the data of interest: human language and it's meaning and how machines are beginning to tackle the notion of meaning in natural language.
 
