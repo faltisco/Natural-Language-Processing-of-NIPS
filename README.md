@@ -28,8 +28,7 @@ can be understood as showing topics 0 and 1. Within topic 0, the term "kernel" h
   
 # Measuring The Coherence Values in LDA Models
 
-The common understanding of the modeling term "coherent" applies. It means the terms within the LDA topic support that topic.  So, the coherency measure in LDA modeling shows how well terms within topics support their shared topic. For a good discussion of coherency, see the following article written by Shashank Kapadia
-Shashank Kapadia:
+The common understanding of the modeling term "coherent" applies. It means the terms within the LDA topic support that topic.  So, the coherency measure in LDA modeling shows how well terms within topics support their shared topic. For a good discussion of coherency, see the following article written by Shashank Kapadia:
 
 (see [here](https://towardsdatascience.com/evaluate-topic-model-in-python-latent-dirichlet-allocation-lda-7d57484bb5d0). 
 
