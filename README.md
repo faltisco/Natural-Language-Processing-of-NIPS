@@ -30,7 +30,7 @@ can be understood as showing topics 0 and 1. Within topic 0, the term "kernel" h
 
 The common understanding of the modeling term "coherent" applies. It means the terms within the LDA topic support that topic.  So, the coherency measure in LDA modeling shows how well terms within topics support their shared topic. For a good discussion of coherency, see the following article written by Shashank Kapadia:
 
-(see --> (https://towardsdatascience.com/evaluate-topic-model-in-python-latent-dirichlet-allocation-lda-7d57484bb5d0). 
+(see --> (https://towardsdatascience.com/evaluate-topic-model-in-python-latent-dirichlet-allocation-lda-7d57484bb5d0) ) 
 
 The models in this analysis used herein utilized the "C_v" measure. Mathematically, it is a measure that uses "normalized pointwise mutual information (NPMI)" and the cosine similarity. It compares the distances between topics. This information was plotted to decide the hyperparameter of "tuning" the 4 LDA models (recall each represents a decade of papers). Here is one plot revealing the coherence scores for models of differing number of topics:
 [<img src="./images/opt_coh_top_90s.png"/>]()
