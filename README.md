@@ -32,7 +32,7 @@ The common understanding of the modeling term "coherent" applies. It means the t
 
 (see https://towardsdatascience.com/evaluate-topic-model-in-python-latent-dirichlet-allocation-lda-7d57484bb5d0 ) 
 
-The models in this analysis used herein utilized the "C_v" measure. Mathematically, it is a measure that uses "normalized pointwise mutual information (NPMI)" and the cosine similarity. It compares the distances between topics. This information was plotted to decide the hyperparameter of "tuning" the 4 LDA models (recall each represents a decade of papers). Here is one plot revealing the coherence scores for models of differing number of topics:
+The models in this analysis usedein utilized the "C_v" measure. Mathematically, it is a measure that uses "normalized pointwise mutual information (NPMI)" and the cosine similarity. It compares the distances between topics. This information was plotted to decide the hyperparameter of "tuning" the 4 LDA models (recall each represents a decade of papers).e is one plot revealing the coherence scores for models of differing number of topics:
 [<img src="./images/opt_coh_top_90s.png"/>]()
 
 Choosing the number of topics the LDA model tries to find is an important parameter to decide upon in LDA modeling. As the plot shows, the coherence value begins to stop increasing around 8 topics, and then certainly levels off at 14. For the 1990s papers, 14 was chosen as the number of topics for the LDA model to find. If computational resources become an issue, it seems also feasible to choose 8. 
@@ -65,7 +65,7 @@ Topic coherence measures were calculated for each of the four period models. The
 
 The coherence scores are a good way of choosing how many topics the modeler should choose when building an LDA model. These scores are understood best in comparison to scores for models of fewer or greater numbers of topics chosen as the parameter for the LDA model. It is clear that for the decades of papers, 14 was the optimal number of topics. For the 2010s LDA model, 20 was the highest coherence score. 
 
-Lastly, LDA results are best analyzed via the term weight equations, and an attempt is made by the analyst to "qualify" rather her than quantify results. For example, in the 2000s, the following equation was resultant for topic 0:
+Lastly, LDA results are best analyzed via the term weight equations, and an attempt is made by the analyst to "qualify" rather here than quantify results. For example, in the 2000s, the following equation was resultant for topic 0:
 
 TOPIC 0: 
 0.043*"model" + 0.024*"response" + 0.022*"subject" + 0.022*"human" + 0.019*"functional" + 0.016*"brain" + 0.016*"trial" + 0.014*"stimulus" + 0.014*"movement" + 0.014*"experiment"
