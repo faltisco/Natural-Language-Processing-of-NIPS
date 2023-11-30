@@ -70,13 +70,14 @@ Lastly, LDA results are best analyzed via the term weight equations, and an atte
 TOPIC 0: 
 0.043*"model" + 0.024*"response" + 0.022*"subject" + 0.022*"human" + 0.019*"functional" + 0.016*"brain" + 0.016*"trial" + 0.014*"stimulus" + 0.014*"movement" + 0.014*"experiment"
 
-Here, I would say that the topic has something to do with doing trials on modeling human stimuli functionally. Perhaps the topic was analyzing brain activity in order to duplicate it computationally. The word cloud for this topic shows as follows:
+Here, I would say that the topic has something to do with doing trials on modeling human stimuli functionally. Perhaps the topic was analyzing brain activity in order to duplicate it computationally. The word cloud for this topic is shown below.
+
+The wordclouds below represents term frequency, not the term coefficients in the equation. So, for the 2000s papers, it appears that the terms "image," "visual," and "region" are frequent. Perhaps this furthers the notion that topic 0 is about imaging the human brain and building a model from that analysis. 
 
 [<img src="./images/Cloud_1990s.png"/>]()
 
 [<img src="./images/Cloud_2000s.png"/>]()
 
-The wordcloud below represents term frequency, not the term coefficients in the equation. So, it looks like "image," "visual," and "region" are frequent. Perhaps this furthers the notion that topic 0 is about imaging the human brain and building a model from that analysis. 
 
 ## Summary Notes
 It’s important to note that much of the model analysis included using the visualization tool LDAvis (a partial screenshot is shown above).  LDAvis has interactivity and graphical display functions that enable quicker, easier analysis. The final analysis of each decade’s Topic 1 using  LDAvis revealed interesting results. As an added bonus result, a 2016-17 models’ results are included below. Here are the found topics, with human named titles:
