@@ -78,7 +78,7 @@ Here, I would say that the topic has something to do with doing trials on modeli
 
 The wordcloud below represents term frequency, not the term coefficients in the equation. So, it looks like "image," "visual," and "region" are frequent. Perhaps this furthers the notion that topic 0 is about imaging the human brain and building a model from that analysis. 
 
-## Conclusions
+## Summary Notes
 It’s important to note that much of the model analysis included using the visualization tool LDAvis (a partial screenshot is shown above).  LDAvis has interactivity and graphical display functions that enable quicker, easier analysis. The final analysis of each decade’s Topic 1 using  LDAvis revealed interesting results. As an added bonus result, a 2016-17 models’ results are included below. Here are the found topics, with human named titles:
 
 1980s - “Modeling the Brain”
