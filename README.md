@@ -79,7 +79,7 @@ The wordclouds below represents term frequency, not the term coefficients in the
 [<img src="./images/Cloud_2000s.png"/>]()
 
 
-## Summary Notes
+## Summary Conclusion: What is the #1 topic for each of the decades of AI papers?
 It’s important to note that much of the model analysis included using the visualization tool LDAvis (a partial screenshot is shown above).  LDAvis has interactivity and graphical display functions that enable quicker, easier analysis. The final analysis of each decade’s Topic 1 using  LDAvis revealed interesting results. As an added bonus result, a 2016-17 models’ results are included below. Here are the found topics, with human named titles:
 
 1980s - “Modeling the Brain”
